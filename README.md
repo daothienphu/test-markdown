@@ -21,10 +21,7 @@
 
 ## Objects
 ### [GameData ](#gamedata)
-### GameData.Song
-### GameData.Configs
-### GameData.SpecificContent
-### GameData.Player
+
 
 
 ## Typical Game Flow
@@ -75,7 +72,7 @@ MEPInstant.startGameAsync().then(gameData => this.setupGame(gameData));
 ### &nbsp;&nbsp; **Paremeters:**  
 &nbsp;&nbsp;&nbsp;&nbsp; none
 ### &nbsp;&nbsp; **Return value:**  
-&nbsp;&nbsp;&nbsp;&nbsp; ***Array\<[object ](#gamedataspecificcontent)\>***: the specific content object.
+&nbsp;&nbsp;&nbsp;&nbsp; ***Array\<[object](#gamedataspecificcontent)\>***: the specific content object.
 
 
 ## **createMusicPlayer**
