@@ -21,7 +21,10 @@
 
 ## Objects
 ### [GameData ](#gamedata)
-
+### [GameData.Song ](#gamedatasong)
+### [GameData.Configs ](#gamedataconfigs)
+### [GameData.SpecificContent ](#gamedataspecificcontent)
+### [GameData.Player ](#gamedataplayer)
 
 
 ## Typical Game Flow
@@ -66,13 +69,18 @@ MEPInstant.startGameAsync().then(gameData => this.setupGame(gameData));
 
 ## **getSpecificContent**
 ### &nbsp;&nbsp; **Description:**  
-&nbsp;&nbsp;&nbsp;&nbsp; Gets the [SpecificContent ](#gamedataspecificcontent) object.
+&nbsp;&nbsp;&nbsp;&nbsp; Gets the [SpecificContent ](#gamedataspecificcontent) array.
 ### &nbsp;&nbsp; **Syntax:**  
 &nbsp;&nbsp;&nbsp;&nbsp; ```getSpecificContent()```
 ### &nbsp;&nbsp; **Paremeters:**  
 &nbsp;&nbsp;&nbsp;&nbsp; none
 ### &nbsp;&nbsp; **Return value:**  
-&nbsp;&nbsp;&nbsp;&nbsp; ***Array\<[object](#gamedataspecificcontent)\>***: the specific content object.
+&nbsp;&nbsp;&nbsp;&nbsp; ***Array\<[object](#gamedataspecificcontent)\>***: the specific content array.
+### &nbsp;&nbsp; **Examples:**
+```
+let specificContent = MEPInstant.getSpecificContent();
+let fileType1 = specificContent[0].fileType;
+```
 
 
 ## **createMusicPlayer**
@@ -84,7 +92,7 @@ MEPInstant.startGameAsync().then(gameData => this.setupGame(gameData));
 ### &nbsp;&nbsp; **Paremeters:**  
 &nbsp;&nbsp;&nbsp;&nbsp; src: url of the mp3 music file.  
 &nbsp;&nbsp;&nbsp;&nbsp; loop: 
-&nbsp;&nbsp;&nbsp;&nbsp; onLoad: callback function.  
+&nbsp;&nbsp;&nbsp;&nbsp; onLoad: load successful callback function.  
 &nbsp;&nbsp;&nbsp;&nbsp; onPlay: callback function.  
 &nbsp;&nbsp;&nbsp;&nbsp; onEnd: callback function.
 ### &nbsp;&nbsp; **Return value:**  
@@ -99,9 +107,9 @@ MEPInstant.startGameAsync().then(gameData => this.setupGame(gameData));
 &nbsp;&nbsp;&nbsp;&nbsp; ```getNotesAsync(levelUrl, isDefaultFilter)```  
 &nbsp;&nbsp;&nbsp;&nbsp; ```getNotesAsync(levelUrl, isDefaultFilter, noteBotV4Settings)```  
 ### &nbsp;&nbsp; **Paremeters:**  
-&nbsp;&nbsp;&nbsp;&nbsp; levelUrl: url of the level's .bin, .mid, .encrypt, or .encrypted file.  
-&nbsp;&nbsp;&nbsp;&nbsp; isDefaultFilter:  
-&nbsp;&nbsp;&nbsp;&nbsp; noteBotV4Settings:  
+&nbsp;&nbsp;&nbsp;&nbsp; ```levelUrl:``` **string** URL to the level file. Currently, the only supported manual content file types are .bin, .mid, .encrypt, or .encrypted.
+&nbsp;&nbsp;&nbsp;&nbsp; ```isDefaultFilter:``` **boolean**  
+&nbsp;&nbsp;&nbsp;&nbsp; ```noteBotV4Settings:``` **object** settings for the note bot v4.  
 ### &nbsp;&nbsp; **Return value:**  
 &nbsp;&nbsp;&nbsp;&nbsp; an object containing the following properties: notes, fullNotes, notesLineIndex, duration, bpm, ppq, difficulties; and the following methods: applySanityCheck, selectNotesByLines, filterByEnergyLevel.
 
@@ -337,3 +345,11 @@ First, we need to initialize the game using **initializeAsync()**. Then,
 ### ```id:``` **string** The player's ID.  
 ### ```name:``` **string** The player's name.  
 ### ```avatarUrl:``` **string** The player's avatar URL.  
+
+
+question:
+what is isDefaultFilter
+
+
+redo:
+create music player
