@@ -6,7 +6,7 @@
 
 
 ## Functions
-### [initializeAsync](#initializeasync)
+### [initializeAsync ](#initializeasync)
 ### [onPause ](#onpause)
 
 
@@ -20,7 +20,7 @@
 
 
 ## Objects
-### GameData
+### [GameData ](#gamedata)
 ### GameData.Song
 ### GameData.Configs
 ### GameData.SpecificContent
@@ -54,13 +54,13 @@ MEPInstant.initializeAsync().then(function() {
 
 ## **startGameAsync**
 ### &nbsp;&nbsp; **Description:**  
-&nbsp;&nbsp;&nbsp;&nbsp; a function that returns a promise to download the neccessary files to populate the data for the *gameData* object.   
+&nbsp;&nbsp;&nbsp;&nbsp; Starts the game flow. 
 ### &nbsp;&nbsp; **Syntax:**  
 &nbsp;&nbsp;&nbsp;&nbsp; ```startGameAsync()```
 ### &nbsp;&nbsp; **Paremeters:**  
 &nbsp;&nbsp;&nbsp;&nbsp; none
 ### &nbsp;&nbsp; **Return value:**  
-&nbsp;&nbsp;&nbsp;&nbsp; **Promise\<void\>**: resolves with the *gameData* object.  
+&nbsp;&nbsp;&nbsp;&nbsp; **Promise\<void\>**: resolves with the [GameData ](#gamedata) object.  
 ### &nbsp;&nbsp; **Examples:**
 ```
 MEPInstant.startGameAsync().then(gameData => this.setupGame(gameData));
