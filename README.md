@@ -69,13 +69,13 @@ MEPInstant.startGameAsync().then(gameData => this.setupGame(gameData));
 
 ## **getSpecificContent**
 ### &nbsp;&nbsp; **Description:**  
-&nbsp;&nbsp;&nbsp;&nbsp; a function that returns the data object of the level. This data object consists of one or all of the links to the level's .bin, .midi, and .mp3 files. The levelId and all the prerequisite data are updated by calling startGameAsync, therefore, it's essential that you call startGameAsync before calling getSpecificContent.
+&nbsp;&nbsp;&nbsp;&nbsp; Gets the [SpecificContent ](#gamedataspecificcontent) object.
 ### &nbsp;&nbsp; **Syntax:**  
 &nbsp;&nbsp;&nbsp;&nbsp; ```getSpecificContent()```
 ### &nbsp;&nbsp; **Paremeters:**  
 &nbsp;&nbsp;&nbsp;&nbsp; none
 ### &nbsp;&nbsp; **Return value:**  
-&nbsp;&nbsp;&nbsp;&nbsp; ***specificContents***: an object with the level's .bin, .midi, and .mp3 files.
+&nbsp;&nbsp;&nbsp;&nbsp; ***Array\<[object ](#gamedataspecificcontent)\>***: the specific content object.
 
 
 ## **createMusicPlayer**
