@@ -7,7 +7,7 @@
 
 ## Functions
 ### [initializeAsync](#initializeasync)
-### [notonPause](#onpause)
+### [onPause ](#onpause)
 
 
 ## Classes
